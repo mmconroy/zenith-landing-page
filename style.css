@@ -1,0 +1,609 @@
+@font-face {
+  font-family: "Futura Book";
+  src: url("./assets/fonts/futura-book.ttf");
+}
+
+@font-face {
+  font-family: "Futura Heavy";
+  src: url("./assets/fonts/futura-heavy.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Futura Book";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Futura Book";
+}
+img {
+  width: 100%;
+}
+
+.body__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: 100% 100%;
+}
+
+.background-texture {
+  width: 100%;
+  position: absolute;
+  top: 325px;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-evenly;
+  align-content: center;
+  margin-bottom: 10rem;
+}
+
+.logo__container > img {
+  width: 145px;
+  position: absolute;
+  top: 24px;
+  left: 16px;
+}
+
+.background-cards {
+  width: 100%;
+  position: absolute;
+  top: 350px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+nav {
+  width: 8rem;
+  height: fit-content;
+  position: absolute;
+  text-align: left;
+  top: 90px;
+  right: 8px;
+  background: white;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  display: none;
+}
+
+nav ul {
+  margin-bottom: 4px;
+  padding: 8px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav li {
+  font-family: "Futura Book";
+  margin: 8px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-decoration: uppercase;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0px;
+  right: 24px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span {
+  display: block;
+  height: 2px;
+  width: 2em;
+  background: linear-gradient(229.93deg, #ab00ff -21.91%, #007bff 133.89%);
+  border-radius: 2px;
+  position: relative;
+  top: 2.5rem;
+}
+
+.nav-toggle-label span::after {
+  display: block;
+  height: 2px;
+  width: 1em;
+  background: linear-gradient(229.93deg, #ab00ff -21.91%, #007bff 133.89%);
+  border-radius: 2px;
+  position: relative;
+  top: 2.5rem;
+}
+
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::after {
+  top: 9px;
+}
+
+.header-card {
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.25);
+}
+
+.header__card__wrapper {
+  margin-bottom: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.body__text-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin-bottom: 10rem;
+}
+
+.body__text-wrapper > h1 {
+  font-family: "Futura Heavy";
+  width: 50%;
+  margin-bottom: 5rem;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+}
+
+.features__wrapper {
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.gradient-text {
+  font-family: "Futura Heavy";
+  text-align: center;
+  background: linear-gradient(229.93deg, #ab00ff -21.91%, #007bff 133.89%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.checkboxes-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.25);
+  margin-bottom: 21px;
+}
+
+.checkboxes-text {
+  width: 80%;
+  font-size: 17px;
+}
+
+.threads-image {
+  width: 16px;
+  height: 57px;
+  margin-left: 3rem;
+}
+
+.integrations-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.25);
+  margin-bottom: 21px;
+}
+
+.integrations-text {
+  width: 80%;
+  font-size: 16px;
+}
+
+.integrations-image {
+  width: 20px;
+  height: 62px;
+  margin-left: 3rem;
+}
+
+.notifications-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.25);
+}
+
+.notifications-text {
+  width: 80%;
+  font-size: 17px;
+}
+
+.notifications-image {
+  width: 20px;
+  height: 62px;
+  margin-left: 3rem;
+}
+
+.dashboard-card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.dashboard-image {
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.25);
+  margin-bottom: 541px;
+}
+
+.dashboard-text {
+  font-family: "Futura Heavy";
+  text-align: left;
+  background: linear-gradient(229.93deg, #ab00ff -21.91%, #007bff 133.89%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 90%;
+  margin-left: 0.5rem;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.integrations__wrapper {
+  display: grid;
+  width: 90%;
+  padding: 8px;
+  margin-left: 0.5rem;
+  grid-row-gap: 2rem;
+  grid-column-gap: 1rem;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "s t"
+    "g j"
+    "a a";
+}
+
+.slack {
+  grid-area: s;
+  width: 115px;
+  height: 35px;
+  justify-self: start;
+}
+
+.trello {
+  grid-area: t;
+  width: 115px;
+  height: 35px;
+  justify-self: flex-end;
+}
+
+.google {
+  grid-area: g;
+  width: 115px;
+  height: 40px;
+  justify-self: start;
+}
+
+.jira {
+  grid-area: j;
+  width: 115px;
+  height: 40px;
+  justify-self: flex-end;
+}
+
+.asana {
+  grid-area: a;
+  width: 115px;
+  height: 85px;
+  justify-self: center;
+  margin-bottom: 5rem;
+}
+
+.footer {
+  width: 100%;
+  background: linear-gradient(229.93deg, #ab00ff -21.91%, #007bff 133.89%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-heading > h1 {
+  font-family: "Futura Heavy";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer > img {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20rem;
+}
+input::placeholder {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.footer__btn-download {
+  font-family: "Futura Book";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0.294118px;
+  width: 118px;
+  height: 35px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 34.5px;
+  text-align: center;
+  align-items: center;
+}
+
+.footer__btn-sign_up {
+  display: none;
+}
+
+.footer__links {
+  color: white;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+.footer-background {
+  width: 100%;
+  height: auto;
+}
+
+.contact-field {
+  display: none;
+}
+
+.name-field {
+  display: none;
+}
+
+.email-field {
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  border-radius: 34.5px;
+  width: 211px;
+  height: 35px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 750px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    width: 25rem;
+    border: none;
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 56px;
+  }
+
+  .nav__links {
+    font-size: 10px;
+    letter-spacing: 0.294118px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+
+  .nav__btn {
+    font-family: "Futura Book";
+    background: linear-gradient(196.2deg, #ab00ff -34.29%, #007bff 136.11%);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.24);
+    border-radius: 100px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.294118px;
+    padding: 8px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+
+  .header-card {
+    width: 80%;
+  }
+
+  .features__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  .checkboxes-card {
+    width: 30%;
+    height: auto;
+    margin-right: 1rem;
+  }
+
+  .integrations-card {
+    width: 30%;
+    height: auto;
+    margin-right: 1rem;
+  }
+
+  .notifications-card {
+    width: 30%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .integrations__wrapper {
+    grid-column-gap: 2rem;
+    grid-template-rows: auto;
+    grid-template-areas: "s t a j g";
+  }
+
+  .slack,
+  .trello,
+  .asana,
+  .jira,
+  .google {
+    justify-self: center;
+  }
+
+  .footer-heading {
+    margin-top: 5rem;
+  }
+
+  .footer__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #name {
+    background: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    border-radius: 34.5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    align-self: center;
+    width: 20rem;
+    height: 36px;
+  }
+
+  .name-field {
+    display: inline-block;
+    align-self: center;
+    width: 20rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-field {
+    display: inline-block;
+    align-self: center;
+    width: 20rem;
+    margin-bottom: 1rem;
+  }
+
+  #contact {
+    display: inline-block;
+    align-content: center;
+    background: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    border-radius: 34.5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    align-self: center;
+    width: 20rem;
+    height: 36px;
+  }
+
+  #email {
+    display: inline-block;
+    background: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    border-radius: 34.5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    width: 20rem;
+    height: 36px;
+  }
+
+  .email-field {
+    display: inline-block;
+    align-self: center;
+    width: 20rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer__btn-download {
+    display: none;
+  }
+
+  .footer__btn-sign_up {
+    display: inline;
+    font-family: "Futura Heavy";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 0.294118px;
+    width: 118px;
+    height: 35px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 34.5px;
+    text-align: center;
+    margin-top: 1rem;
+    align-self: center;
+  }
+}
