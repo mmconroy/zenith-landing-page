@@ -176,7 +176,6 @@ nav a {
 
 .features__wrapper {
   width: 100%;
-  margin-bottom: 10rem;
 }
 
 .gradient-text {
@@ -189,10 +188,11 @@ nav a {
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
+  margin-bottom: 5rem;
 }
 
 .checkboxes-card {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: flex;
   padding: 16px;
@@ -200,6 +200,8 @@ nav a {
   align-content: center;
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.25);
   margin-bottom: 21px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .checkboxes-text {
@@ -214,12 +216,13 @@ nav a {
 }
 
 .integrations-card {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: flex;
   padding: 16px;
   justify-content: center;
   align-content: center;
+  margin-left: 1rem;
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.25);
   margin-bottom: 21px;
 }
@@ -236,10 +239,11 @@ nav a {
 }
 
 .notifications-card {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: flex;
   padding: 16px;
+  margin-left: 1rem;
   justify-content: center;
   align-content: center;
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.25);
@@ -259,8 +263,10 @@ nav a {
 .dashboard-card {
   display: flex;
   width: 100%;
+  height: auto;
   flex-direction: column;
-  padding: 2rem;
+  justify-content: center;
+  padding: 8px;
 }
 
 .dashboard-image {
@@ -274,12 +280,12 @@ nav a {
   background: linear-gradient(229.93deg, #ab00ff -21.91%, #007bff 133.89%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 90%;
+  width: 100%;
   margin-left: 0.5rem;
   font-size: 24px;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .integrations__wrapper {
@@ -346,7 +352,7 @@ nav a {
   justify-content: center;
 }
 
-.footer-heading > h1 {
+.footer__heading > h1 {
   font-family: "Futura Heavy";
   font-style: normal;
   font-weight: bold;
@@ -422,7 +428,7 @@ input::placeholder {
   opacity: 0.4;
   border-radius: 34.5px;
   width: 211px;
-  height: 35px;
+  height: 36px;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -477,10 +483,21 @@ input::placeholder {
     width: 80%;
   }
 
+  .gradient-text {
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 1px;
+  }
+
   .features__wrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
+    margin-top: 5rem;
+    padding: 16px;
   }
 
   .checkboxes-card {
@@ -498,12 +515,23 @@ input::placeholder {
   .notifications-card {
     width: 30%;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
   .integrations__wrapper {
     grid-column-gap: 2rem;
     grid-template-rows: auto;
     grid-template-areas: "s t a j g";
+  }
+
+  .dashboard-text {
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 1px;
+    text-align: center;
+    align-self: center;
   }
 
   .slack,
@@ -514,7 +542,7 @@ input::placeholder {
     justify-self: center;
   }
 
-  .footer-heading {
+  .footer__heading {
     margin-top: 5rem;
   }
 
@@ -528,18 +556,16 @@ input::placeholder {
     mix-blend-mode: normal;
     opacity: 0.4;
     border-radius: 34.5px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
     align-self: center;
-    width: 20rem;
-    height: 36px;
+    height: 100%;
+    width: 100%;
   }
 
   .name-field {
     display: inline-block;
     align-self: center;
     width: 20rem;
+    height: 36px;
     margin-bottom: 1rem;
   }
 
@@ -547,42 +573,41 @@ input::placeholder {
     display: inline-block;
     align-self: center;
     width: 20rem;
+    height: 36px;
     margin-bottom: 1rem;
   }
 
   #contact {
-    display: inline-block;
-    align-content: center;
     background: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.4;
     border-radius: 34.5px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
     align-self: center;
-    width: 20rem;
-    height: 36px;
+    height: 100%;
+    width: 100%;
+  }
+
+  #contact::placeholder {
+    color: #ffffff;
   }
 
   #email {
-    display: inline-block;
     background: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.4;
     border-radius: 34.5px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    width: 20rem;
-    height: 36px;
+    align-self: center;
+    height: 100%;
+    width: 100%;
   }
 
   .email-field {
     display: inline-block;
     align-self: center;
     width: 20rem;
+    height: 36px;
     margin-bottom: 1rem;
+    z-index: 0;
   }
 
   .footer__btn-download {
